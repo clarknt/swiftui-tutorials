@@ -15,4 +15,5 @@ These projects require XCode 11 or above
 Projects | Screenshots
 ---      | ---
 [Creating and combining views](SwiftUIEssentials/CreatingAndCombiningViews) | ![screen01](SwiftUIEssentials/CreatingAndCombiningViews/screenshots/small/screen01.png)
+[Building lists and navigation](SwiftUIEssentials/BuildingListsAndNavigation) | ![screen01](SwiftUIEssentials/BuildingListsAndNavigation/screenshots/small/screen01.png) ![screen01](SwiftUIEssentials/BuildingListsAndNavigation/screenshots/small/screen02.png)
 
