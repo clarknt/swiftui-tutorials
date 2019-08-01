@@ -15,5 +15,6 @@ These projects require XCode 11 Beta 4 or above.
 Projects | Screenshots
 ---      | ---
 [Creating and combining views](01-SwiftUIEssentials/01-CreatingAndCombiningViews) | ![screen01](01-SwiftUIEssentials/01-CreatingAndCombiningViews/screenshots/small/screen01.png)
-[Building lists and navigation](01-SwiftUIEssentials/02-BuildingListsAndNavigation) | ![screen01](01-SwiftUIEssentials/02-BuildingListsAndNavigation/screenshots/small/screen01.png) ![screen01](01-SwiftUIEssentials/02-BuildingListsAndNavigation/screenshots/small/screen02.png)
+[Building lists and navigation](01-SwiftUIEssentials/02-BuildingListsAndNavigation) | ![screen01](01-SwiftUIEssentials/02-BuildingListsAndNavigation/screenshots/small/screen01.png) ![screen02](01-SwiftUIEssentials/02-BuildingListsAndNavigation/screenshots/small/screen02.png)
+[Handling user input](01-SwiftUIEssentials/03-HandlingUserInput) | ![screen01](01-SwiftUIEssentials/03-HandlingUserInput/screenshots/small/screen01.png) ![screen02](01-SwiftUIEssentials/03-HandlingUserInput/screenshots/small/screen02.png) ![screen03](01-SwiftUIEssentials/03-HandlingUserInput/screenshots/small/screen03.png)
 
