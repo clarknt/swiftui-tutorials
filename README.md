@@ -4,7 +4,7 @@ Source code for Apple SwiftUI tutorials.
 
 https://developer.apple.com/tutorials/swiftui/
 
-These projects require XCode 11 Beta 4 or above.
+These projects require XCode 11 Beta 5 or above.
 
 ## Preview
 
