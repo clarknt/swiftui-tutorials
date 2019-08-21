@@ -4,7 +4,7 @@ Source code for Apple SwiftUI tutorials.
 
 https://developer.apple.com/tutorials/swiftui/
 
-These projects require XCode 11 Beta 5 or above.
+These projects require XCode 11 Beta 6 or above.
 
 ## Preview
 
@@ -27,3 +27,12 @@ Projects | Screenshots
 ---      | ---
 Drawing paths and shapes | Not working in Xcode 11 Beta 5 (known Apple issue) 
 [Animating views and transitions](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions) | ![screen01](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen01.png) ![screen02](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen02.png) ![screen03](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen03.png) ![screen04](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen04.png)
+
+
+
+
+### App design and layout
+
+Projects | Screenshots
+---      | ---
+[Composing complex interfaces](03-AppDesignAndLayout/01-ComposingComplexInterfaces) | ![screen01](03-AppDesignAndLayout/01-ComposingComplexInterfaces/screenshots/small/screen01.png) ![screen02](03-AppDesignAndLayout/01-ComposingComplexInterfaces/screenshots/small/screen02.png) ![screen03](03-AppDesignAndLayout/01-ComposingComplexInterfaces/screenshots/small/screen03.png) ![screen04](03-AppDesignAndLayout/01-ComposingComplexInterfaces/screenshots/small/screen04.png)
