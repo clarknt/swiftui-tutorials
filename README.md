@@ -25,7 +25,7 @@ Projects | Screenshots
 
 Projects | Screenshots
 ---      | ---
-Drawing paths and shapes | Not working in Xcode 11 Beta 5 (known Apple issue) 
+[Drawing paths and shapes](02-DrawingAndAnimation/01-DrawingPathsAndShapes) | ![screen01](02-DrawingAndAnimation/01-DrawingPathsAndShapes/screenshots/small/screen01.png)
 [Animating views and transitions](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions) | ![screen01](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen01.png) ![screen02](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen02.png) ![screen03](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen03.png) ![screen04](02-DrawingAndAnimation/02-AnimatingViewsAndTransitions/screenshots/small/screen04.png)
 
 
