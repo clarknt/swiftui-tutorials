@@ -21,7 +21,7 @@ struct CategoryHome: View {
     }
     
     @State var showingProfile = false
-
+    
     var profileButton: some View {
         Button(action: { self.showingProfile.toggle() }) {
             Image(systemName: "person.crop.circle")
@@ -30,28 +30,33 @@ struct CategoryHome: View {
                 .padding()
         }
     }
-
+    
     var body: some View {
         NavigationView {
-            List {
-                FeaturedLandmarks(landmarks: featured)
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
-
-                ForEach(categories.keys.sorted(), id: \.self) { key in
-                    CategoryRow(categoryName: key, items: self.categories[key]!)
+            // tutorial has a List instead of ScrollView + VStack
+            // but the List breaks the inner NavigationLink in CategoryRow
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    FeaturedLandmarks(landmarks: featured)
+                        .scaledToFill()
+                        .frame(height: 200)
+                        .clipped()
+                        .listRowInsets(EdgeInsets())
+                    
+                    ForEach(categories.keys.sorted(), id: \.self) { key in
+                        CategoryRow(categoryName: key, items: self.categories[key]!)
+                    }
+                    .listRowInsets(EdgeInsets())
+                    
+                    NavigationLink(destination: LandmarkList()) {
+                        Text("See All")
+                    }
                 }
-                .listRowInsets(EdgeInsets())
-
-                NavigationLink(destination: LandmarkList()) {
-                    Text("See All")
+                .navigationBarTitle(Text("Featured"))
+                .navigationBarItems(trailing: profileButton)
+                .sheet(isPresented: $showingProfile) {
+                    Text("User Profile")
                 }
-            }
-            .navigationBarTitle(Text("Featured"))
-            .navigationBarItems(trailing: profileButton)
-            .sheet(isPresented: $showingProfile) {
-                Text("User Profile")
             }
         }
     }
