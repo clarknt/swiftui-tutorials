@@ -1,3 +1,3 @@
-# Drawing Animating Views and Transitions
+# Completed Project: Composing Complex Interfaces
 
-Use this project to code along with the [Animating Views and Transitions](https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions) tutorial.
+Explore the completed project for the [Composing Complex Interfaces](https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces) tutorial.
