@@ -33,29 +33,52 @@ struct CategoryHome: View {
     
     var body: some View {
         NavigationView {
-            // tutorial has a List instead of ScrollView + VStack
-            // but the List breaks the inner NavigationLink in CategoryRow
+            // tutorial has a List, but it breaks the inner NavigationLink in CategoryRow
+            // replace List with ScrollView, VStack, Divider, padding, row simulation
             ScrollView(.vertical, showsIndicators: true) {
-                VStack {
+                VStack(alignment: .leading) {
                     FeaturedLandmarks(landmarks: featured)
                         .scaledToFill()
                         .frame(height: 200)
                         .clipped()
-                        .listRowInsets(EdgeInsets())
-                        
-                    ForEach(categories.keys.sorted(), id: \.self) { key in
-                        CategoryRow(categoryName: key, items: self.categories[key]!)
-                    }
-                    .listRowInsets(EdgeInsets())
+                        // .listRowInsets(EdgeInsets())
                     
-                    NavigationLink(destination: LandmarkList()) {
-                        Text("See All")
+                    ForEach(categories.keys.sorted(), id: \.self) { key in
+                        VStack {
+                            CategoryRow(categoryName: key, items: self.categories[key]!)
+                            
+                            Divider()
+                                .padding(.leading, 15)
+                        }
                     }
+                    //.listRowInsets(EdgeInsets())
+
+                    NavigationLink(destination: LandmarkList()) {
+                        // simulate list row
+                        HStack {
+                            Text("See All")
+                            .padding(.leading, 15)
+                            .foregroundColor(.primary)
+
+                            Spacer()
+                            
+                            // don't bother with correct color, scale or weight
+                            // just wait for NavigationLink to work correctly within List
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 15)
+                        }
+                        
+                    }
+
+                    Divider()
+                        .padding(.leading, 15)
                 }
                 .navigationBarTitle(Text("Featured"))
                 .navigationBarItems(trailing: profileButton)
             }
             // move out of scrollview else the sheet shows once only
+            // when in ScrollView + VStack (worked fine with List)
             .sheet(isPresented: $showingProfile) {
                 Text("User Profile")
             }
