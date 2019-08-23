@@ -1,3 +1,4 @@
-# Completed Project: Composing Complex Interfaces
+# Composing Complex Interfaces
 
-Explore the completed project for the [Composing Complex Interfaces](https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces) tutorial.
+Use this project to code along with the [Composing Complex Interfaces](https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces) tutorial.
+
