@@ -54,9 +54,10 @@ struct CategoryHome: View {
                 }
                 .navigationBarTitle(Text("Featured"))
                 .navigationBarItems(trailing: profileButton)
-                .sheet(isPresented: $showingProfile) {
-                    ProfileHost()
-                }
+            }
+            // move out of scrollview else the sheet shows once only
+            .sheet(isPresented: $showingProfile) {
+                ProfileHost()
             }
         }
     }
