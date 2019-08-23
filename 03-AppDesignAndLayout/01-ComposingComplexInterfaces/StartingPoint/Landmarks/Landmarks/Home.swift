@@ -42,7 +42,7 @@ struct CategoryHome: View {
                         .frame(height: 200)
                         .clipped()
                         .listRowInsets(EdgeInsets())
-                    
+                        
                     ForEach(categories.keys.sorted(), id: \.self) { key in
                         CategoryRow(categoryName: key, items: self.categories[key]!)
                     }
@@ -65,7 +65,11 @@ struct CategoryHome: View {
 struct FeaturedLandmarks: View {
     var landmarks: [Landmark]
     var body: some View {
-        landmarks[0].image.resizable()
+        NavigationLink(destination: LandmarkDetail(landmark: landmarks[0])) {
+            landmarks[0].image
+                .resizable()
+                .renderingMode(.original)
+        }
     }
 }
 

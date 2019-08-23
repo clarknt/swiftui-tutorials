@@ -65,7 +65,11 @@ struct CategoryHome: View {
 struct FeaturedLandmarks: View {
     var landmarks: [Landmark]
     var body: some View {
-        landmarks[0].image.resizable()
+        NavigationLink(destination: LandmarkDetail(landmark: landmarks[0])) {
+            landmarks[0].image
+                .resizable()
+                .renderingMode(.original)
+        }
     }
 }
 
