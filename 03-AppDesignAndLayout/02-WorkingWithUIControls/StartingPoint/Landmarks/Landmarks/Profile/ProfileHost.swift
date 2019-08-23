@@ -18,7 +18,9 @@ struct ProfileHost: View {
             HStack {
                 if self.mode?.wrappedValue == .active {
                     Button(action: {
-                        self.draftProfile = self.profile // correct edit button behaviour
+                        // restore original profile on cancel
+                        // (is executed before onDisappear below)
+                        self.draftProfile = self.profile
                         self.mode?.animation().wrappedValue = .inactive
                     }) {
                         Text("Cancel")
@@ -34,7 +36,8 @@ struct ProfileHost: View {
             } else {
                 ProfileEditor(profile: $draftProfile)
                     .onDisappear {
-                        self.profile = self.draftProfile // correct edit button behaviour
+                        // update profile (whereas Cancel or Done is pressed)
+                        self.profile = self.draftProfile
                 }
             }
         }
