@@ -2,6 +2,10 @@
 
 https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces
 
+## Adjustments
+- Make featured landscape clickable
+- Work around to make landscapes clickable
+
 ## Screenshots
 
 ![screen01](screenshots/screen01.png)
