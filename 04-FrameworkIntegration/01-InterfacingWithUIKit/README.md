@@ -4,7 +4,7 @@ https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit
 
 ## Issues
 
-- Page control show in Live Preview, but not in the simulator
+- Page control is visible in Live Preview, but not in the simulator
 
 ## Screenshots
 
