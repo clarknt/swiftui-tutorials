@@ -16,7 +16,7 @@ struct LandmarkDetail: View {
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
 
-            CircleImage(image: landmark.image(forSize: 250))
+            CircleImage(image: landmark.image)
                 .offset(x: 0, y: -130)
                 .padding(.bottom, -130)
 
