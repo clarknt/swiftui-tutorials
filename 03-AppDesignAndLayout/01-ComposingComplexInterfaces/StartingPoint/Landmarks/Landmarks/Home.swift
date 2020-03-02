@@ -61,14 +61,19 @@ struct CategoryHome: View {
 struct FeaturedLandmarks: View {
     var landmarks: [Landmark]
     var body: some View {
-        landmarks[0].image.resizable()
+        // use a ZStack to hide the navigation arrow
+        ZStack {
+            NavigationLink(destination: LandmarkDetail(landmark: landmarks[0])) { EmptyView() }
+
+            landmarks[0].image
+                .resizable()
+                .renderingMode(.original)
+        }
     }
 }
 
-#if DEBUG
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
         CategoryHome()
     }
 }
-#endif

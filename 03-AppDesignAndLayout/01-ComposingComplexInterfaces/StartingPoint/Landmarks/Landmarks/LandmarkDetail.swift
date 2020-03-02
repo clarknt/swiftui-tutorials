@@ -60,7 +60,6 @@ struct LandmarkDetail: View {
     }
 }
 
-#if DEBUG
 struct LandmarkDetail_Preview: PreviewProvider {
     static var previews: some View {
         let userData = UserData()
@@ -68,4 +67,3 @@ struct LandmarkDetail_Preview: PreviewProvider {
             .environmentObject(userData)
     }
 }
-#endif

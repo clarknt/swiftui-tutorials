@@ -40,10 +40,8 @@ struct HikeDetail: View {
     }
 }
 
-#if DEBUG
 struct HikeDetail_Previews: PreviewProvider {
     static var previews: some View {
         HikeDetail(hike: hikeData[0])
     }
 }
-#endif
