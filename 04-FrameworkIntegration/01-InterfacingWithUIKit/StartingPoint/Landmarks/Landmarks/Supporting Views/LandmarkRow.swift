@@ -15,7 +15,7 @@ struct LandmarkRow: View {
             landmark.image
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(verbatim: landmark.name)
+            Text(landmark.name)
             Spacer()
 
             if landmark.isFavorite {
@@ -27,7 +27,6 @@ struct LandmarkRow: View {
     }
 }
 
-#if DEBUG
 struct LandmarkRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -37,4 +36,3 @@ struct LandmarkRow_Previews: PreviewProvider {
         .previewLayout(.fixed(width: 300, height: 70))
     }
 }
-#endif

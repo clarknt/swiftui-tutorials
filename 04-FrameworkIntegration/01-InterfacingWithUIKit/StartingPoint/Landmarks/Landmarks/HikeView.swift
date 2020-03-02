@@ -22,19 +22,19 @@ struct HikeView: View {
     @State private var showDetail = true
 
     var body: some View {
-        VStack(spacing: 25) { // a bit of room to breathe
+        VStack(spacing: 50) { // a bit of room to breathe
             HStack {
                 HikeGraph(hike: hike, path: \.elevation)
                     .frame(width: 50, height: 30)
                     .animation(nil)
-                
+
                 VStack(alignment: .leading) {
-                    Text(verbatim: hike.name)
+                    Text(hike.name)
                         .font(.headline)
-                    Text(verbatim: hike.distanceText)
+                    Text(hike.distanceText)
                 }
                 .fixedSize() // prevent text clipping
-                
+
                 Spacer()
 
                 Button(action: {
@@ -58,7 +58,6 @@ struct HikeView: View {
     }
 }
 
-#if DEBUG
 struct HikeView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -68,4 +67,3 @@ struct HikeView_Previews: PreviewProvider {
         }
     }
 }
-#endif

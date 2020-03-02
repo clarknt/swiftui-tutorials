@@ -27,7 +27,7 @@ struct LandmarkDetail: View {
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text(verbatim: landmark.name)
+                    Text(landmark.name)
                         .font(.title)
                     
                     Button(action: {
@@ -46,10 +46,10 @@ struct LandmarkDetail: View {
                 }
                 
                 HStack(alignment: .top) {
-                    Text(verbatim: landmark.park)
+                    Text(landmark.park)
                         .font(.subheadline)
                     Spacer()
-                    Text(verbatim: landmark.state)
+                    Text(landmark.state)
                         .font(.subheadline)
                 }
             }
@@ -60,7 +60,6 @@ struct LandmarkDetail: View {
     }
 }
 
-#if DEBUG
 struct LandmarkDetail_Preview: PreviewProvider {
     static var previews: some View {
         let userData = UserData()
@@ -68,4 +67,3 @@ struct LandmarkDetail_Preview: PreviewProvider {
             .environmentObject(userData)
     }
 }
-#endif

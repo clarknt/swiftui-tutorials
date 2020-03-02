@@ -67,7 +67,6 @@ struct HikeGraph: View {
     }
 }
 
-#if DEBUG
 struct HikeGraph_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -80,4 +79,3 @@ struct HikeGraph_Previews: PreviewProvider {
         }
     }
 }
-#endif

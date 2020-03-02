@@ -22,7 +22,8 @@ struct ProfileEditor: View {
             HStack {
                 Text("Username").bold()
                 Divider()
-                // note: editing username crashes when tapping "Done" if the keyboard hasn't been dismissed
+                // note: on the simulator, editing username crashes when tapping "Done"
+                // if the keyboard hasn't been dismissed. Works fine on real device.
                 TextField("Username", text: $profile.username)
             }
             

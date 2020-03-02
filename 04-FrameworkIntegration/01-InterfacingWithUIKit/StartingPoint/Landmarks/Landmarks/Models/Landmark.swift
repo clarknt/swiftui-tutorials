@@ -31,7 +31,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         return Image(
             ImageStore.loadImage(name: "\(imageName)_feature"),
             scale: 2,
-            label: Text(verbatim: name))
+            label: Text(name))
     }
 
     enum Category: String, CaseIterable, Codable, Hashable {
