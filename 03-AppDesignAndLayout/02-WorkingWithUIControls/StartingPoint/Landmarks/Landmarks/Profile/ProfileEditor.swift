@@ -16,12 +16,13 @@ struct ProfileEditor: View {
         let max = Calendar.current.date(byAdding: .year, value: 1, to: profile.goalDate)!
         return min...max
     }
-    
+
     var body: some View {
         List {
             HStack {
                 Text("Username").bold()
                 Divider()
+                // note: editing username crashes when tapping "Done" if the keyboard hasn't been dismissed
                 TextField("Username", text: $profile.username)
             }
             
@@ -31,7 +32,7 @@ struct ProfileEditor: View {
             
             VStack(alignment: .leading, spacing: 20) {
                 Text("Seasonal Photo").bold()
-                
+
                 Picker("Seasonal Photo", selection: $profile.seasonalPhoto) {
                     ForEach(Profile.Season.allCases, id: \.self) { season in
                         Text(season.rawValue).tag(season)
@@ -40,7 +41,7 @@ struct ProfileEditor: View {
                 .pickerStyle(SegmentedPickerStyle())
             }
             .padding(.top)
-            
+
             VStack(alignment: .leading, spacing: 20) {
                 Text("Goal Date").bold()
                 DatePicker(

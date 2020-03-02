@@ -10,30 +10,31 @@ import SwiftUI
 
 struct ProfileSummary: View {
     var profile: Profile
-    
-    static var goalFormat: DateFormatter {
+
+    static let goalFormat: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d, yyyy"
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
         return formatter
-    }
-    
+    }()
+
     var body: some View {
-        // List present in tutorial breaks the HikeView functionalities
-        // like in Home, as a workaround, simulate a List with ScrollView + VStack
+        // List in the tutorial breaks the HikeView functionalities
+        // As a workaround, simulate a List with ScrollView + VStack
         ScrollView(.vertical, showsIndicators: true) {
             VStack(alignment: .leading) {
                 Text(profile.username)
                     .bold()
                     .font(.title)
-                
+
                 Divider()
-                
+
                 Text("Notifications: \(self.profile.prefersNotifications ? "On": "Off" )")
-                
+
                 Divider()
 
                 Text("Seasonal Photos: \(self.profile.seasonalPhoto.rawValue)")
-                
+
                 Divider()
 
                 Text("Goal Date: \(self.profile.goalDate, formatter: Self.goalFormat)")
@@ -46,27 +47,27 @@ struct ProfileSummary: View {
                     ScrollView {
                         HStack {
                             HikeBadge(name: "First Hike")
-                            
+
                             HikeBadge(name: "Earth Day")
                                 .hueRotation(Angle(degrees: 90))
-                            
-                            
+
+
                             HikeBadge(name: "Tenth Hike")
                                 .grayscale(0.5)
                                 .hueRotation(Angle(degrees: 45))
                         }
                     }
                     .frame(height: 140)
-                    
-                    
+
+
                     Divider()
                 }
-                
+
                 VStack(alignment: .leading) {
                     Text("Recent Hikes")
                         .font(.headline)
-                    
-                    // Within a List (top element in the body) like in the turorial,
+
+                    // Within a List (top element in the body) like in the tutorial,
                     // Heart Rate and Pace buttons don't work (clicking anywhere
                     // has the same effect as the toggle button).
                     // The toggle button color is also off.
