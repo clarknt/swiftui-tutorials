@@ -24,12 +24,17 @@ struct PageViewController: UIViewControllerRepresentable {
         pageViewController.dataSource = context.coordinator
         pageViewController.delegate = context.coordinator
 
+        // move this here from updateUIViewController,
+        // as otherwise it breaks navigation
+        // (difference is that makeUIViewController is called only once)
+        pageViewController.setViewControllers(
+            [controllers[currentPage]], direction: .forward, animated: true)
+
         return pageViewController
     }
 
     func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
-        pageViewController.setViewControllers(
-            [controllers[currentPage]], direction: .forward, animated: true)
+        // content moved to makeUIViewController
     }
 
     class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {

@@ -36,8 +36,8 @@ struct CategoryHome: View {
         NavigationView {
             List {
                 FeaturedLandmarks(landmarks: featured)
-                    .scaledToFill()
-                    .frame(height: 200)
+                    .aspectRatio(3/2, contentMode: .fill)
+                    .frame(height: 200, alignment: .bottom)
                     .clipped()
                     .listRowInsets(EdgeInsets())
 
@@ -62,14 +62,26 @@ struct CategoryHome: View {
 
 struct FeaturedLandmarks: View {
     var landmarks: [Landmark]
+
+    @State private var navigateToFeature = false
+    @State private var currentFeaturedLandmark: Landmark?
+
     var body: some View {
         // use a ZStack to hide the navigation arrow
         ZStack {
-            NavigationLink(destination: LandmarkDetail(landmark: landmarks[0])) { EmptyView() }
+            NavigationLink(destination: LandmarkDetail(landmark: currentFeaturedLandmark ?? landmarks[0]), isActive: $navigateToFeature) {
+                EmptyView()
+            }
 
-            landmarks[0].image
-                .resizable()
-                .renderingMode(.original)
+            PageView(
+                features.map { landmark in
+                    FeatureCard(landmark: landmark)
+                        .onTapGesture {
+                            self.currentFeaturedLandmark = landmark
+                            self.navigateToFeature.toggle()
+                    }
+                }
+            )
         }
     }
 }
