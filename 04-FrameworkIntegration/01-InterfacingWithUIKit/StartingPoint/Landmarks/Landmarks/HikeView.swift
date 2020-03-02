@@ -22,7 +22,7 @@ struct HikeView: View {
     @State private var showDetail = true
 
     var body: some View {
-        VStack(spacing: 50) { // a bit of room to breathe
+        VStack(spacing: 75) { // a bit of room to breathe
             HStack {
                 HikeGraph(hike: hike, path: \.elevation)
                     .frame(width: 50, height: 30)

@@ -61,7 +61,7 @@ struct HikeGraph: View {
                     .transition(.slide)
                     .animation(.ripple())
                 }
-                .offset(x: 0, y: proxy.size.height * heightRatio + 25) // add 25 to get less blank space below
+                .offset(x: 0, y: proxy.size.height * heightRatio)
             }
         }
     }

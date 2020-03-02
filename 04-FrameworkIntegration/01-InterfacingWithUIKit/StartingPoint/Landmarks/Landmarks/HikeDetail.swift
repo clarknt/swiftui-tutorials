@@ -42,6 +42,10 @@ struct HikeDetail: View {
 
 struct HikeDetail_Previews: PreviewProvider {
     static var previews: some View {
-        HikeDetail(hike: hikeData[0])
+        Group {
+            HikeDetail(hike: hikeData[0], dataToShow: \Hike.Observation.elevation)
+            HikeDetail(hike: hikeData[0], dataToShow: \Hike.Observation.heartRate)
+            HikeDetail(hike: hikeData[0], dataToShow: \Hike.Observation.pace)
+        }
     }
 }
