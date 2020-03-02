@@ -29,9 +29,9 @@ struct HikeView: View {
                     .animation(nil)
                 
                 VStack(alignment: .leading) {
-                    Text(verbatim: hike.name)
+                    Text(hike.name)
                         .font(.headline)
-                    Text(verbatim: hike.distanceText)
+                    Text(hike.distanceText)
                 }
                 .fixedSize() // prevent text clipping
                 
