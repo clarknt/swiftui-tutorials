@@ -30,7 +30,7 @@ struct GraphCapsule: View {
     var body: some View {
         Capsule()
             .fill(Color.white)
-            .frame(height: height * heightRatio, alignment: .bottom)
+            .frame(height: height * heightRatio)
             .offset(x: 0, y: height * -offsetRatio)
         .animation(animation)
     }
