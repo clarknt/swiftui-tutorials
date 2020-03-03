@@ -3,8 +3,7 @@
 https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces
 
 ## Adjustments
-- Make featured landscape clickable
-- Work around to make landscapes clickable
+- Add tap and navigation to featured landscape
 
 ## Screenshots
 

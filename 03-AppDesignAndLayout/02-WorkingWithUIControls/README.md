@@ -3,8 +3,7 @@
 https://developer.apple.com/tutorials/swiftui/working-with-ui-controls
 
 ## Adjustments
-- Replace double "Done" button by "Cancel" and "Done" buttons and correct behaviour
-- Work around to make HikeView functional
+- Adjustments to make HikeView functional
 
 ## Screenshots
 

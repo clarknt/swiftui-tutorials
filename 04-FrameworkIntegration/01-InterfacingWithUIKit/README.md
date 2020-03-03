@@ -2,9 +2,9 @@
 
 https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit
 
-## Issues
-
-- Page control is visible in Live Preview, but not in the simulator
+## Adjustments
+- Integrate featured landscapes page control to home page
+- Add tap and navigation to featured landscapes
 
 ## Screenshots
 
